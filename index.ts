@@ -28,8 +28,8 @@ class SudokuBoard {
     this.board = boardMatrix
     this.width = boardMatrix.length
     this.height = boardMatrix.length
-    this.subdivisionWidth = this.width / 2
-    this.subdivisionHeight = this.height / 2
+    this.subdivisionWidth = Math.floor(Math.sqrt(this.width))
+    this.subdivisionHeight = Math.floor(Math.sqrt(this.height))
   }
 
   valueAt(x, y) {
@@ -53,6 +53,6 @@ class SudokuBoard {
   }
 
   getSquare(x, y) {
-   
+    
   }
 }
